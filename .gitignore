@@ -1,6 +1,6 @@
 node_modules/
 *.log
-lib/
+# lib/
 
 .DS_Store
 .awcache/
