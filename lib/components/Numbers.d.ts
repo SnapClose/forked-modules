@@ -1,14 +1,21 @@
 import React from 'react';
+import { AnimatedValue, ForwardedProps } from 'react-spring';
 import { MODE } from '../helpers/constants';
 interface MinuteProps {
     anim: {
-        opacity: any;
-        translate: any;
-        translateInner: any;
+        opacity: AnimatedValue<ForwardedProps<{
+            opacity: number;
+        }>>;
+        translate: AnimatedValue<ForwardedProps<{
+            translate: number;
+        }>>;
+        translateInner: AnimatedValue<ForwardedProps<{
+            translate: number;
+        }>>;
     };
 }
 interface HourProps extends MinuteProps {
-    mode: MODE.HOURS_12 | MODE.HOURS_24;
+    mode: MODE;
     hour24Mode: boolean;
 }
 declare function hours({ anim, mode, hour24Mode }: HourProps): JSX.Element;

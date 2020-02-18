@@ -8,15 +8,24 @@ export declare enum MERIDIEM {
     'am' = "am",
     'pm' = "pm"
 }
-declare type ClockValues = {
-    [mode in MODE]: {
+export declare const CLOCK_VALUES: {
+    MINUTES: {
         increments: number;
         numbers: string[];
         dropdown: string[];
-        numbersInner?: string[];
+    };
+    HOURS_12: {
+        increments: number;
+        numbers: string[];
+        dropdown: string[];
+    };
+    HOURS_24: {
+        increments: number;
+        numbers: string[];
+        numbersInner: string[];
+        dropdown: string[];
     };
 };
-export declare const CLOCK_VALUES: ClockValues;
 export declare const VISIBLE_NUMBERS_PER_CIRCLE = 12;
 export declare const CLOCK_RADIUS = 110;
 export declare const CLOCK_SIZE: number;
@@ -34,4 +43,3 @@ export declare const INNER_NUMBER_POSITIONING: {
     exit: number;
     enter: number;
 };
-export {};

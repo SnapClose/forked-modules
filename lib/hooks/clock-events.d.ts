@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="@emotion/core" />
 import { ElementRef } from '../helpers/types';
 declare type CalcTimeFromAngle = (angle: number, { canAutoChangeUnit, wasTapped, }: {
     canAutoChangeUnit: boolean;
