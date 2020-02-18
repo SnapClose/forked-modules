@@ -6,7 +6,7 @@
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catc/react-timekeeper.git"
+    "url": "git+https://github.com/SnapClose/forked-modules.git#react-timekeeper"
   },
   "homepage": "https://catc.github.io/react-timekeeper/",
   "keywords": [
