@@ -12,3 +12,5 @@ Add to your project's package.json like so:
     git checkout -b your_branch_name
 
 Duplicate the module you want to copy in here, and commit to your branch name.
+
+TEST
