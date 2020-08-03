@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/google/material-design-icons",
   "devDependencies": {
-    "import-index-generator": "^0.2.2"
+    "import-index-generator": "https://github.com/SnapClose/forked-modules.git#import-index-generator"
   }
 }
