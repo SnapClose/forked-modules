@@ -97,15 +97,20 @@ const filesList = listFilesInDir(srcDir, fileExts, recurSrcDir)
 // sort to have a deterministic result
 filesList.sort()
 
-const exps = []
 for (let idx = 0; idx < filesList.length; idx++) {
-  const imp = `import * as i${idx} from '${relPathOutSrc}/${filesList[idx]}'\n`
+  const file = filesList[idx]
+  const type = file.substring(0, file.indexOf('/')).toUpperCase()+'_';
+  const modifiedFileName = type
+   + file
+    .toUpperCase()
+    .substring(file.lastIndexOf('/') + 1, file.indexOf('.'))
+    .replace(/-/g, '_')
 
-  exps.push(`{ filename: '${filesList[idx]}', exported: i${idx} }`)
-  fs.writeSync(outputFd, imp, null, 'utf8')
+  const exp = `export {default as ${modifiedFileName}} from '${relPathOutSrc}/${file}'\n`;
+
+  fs.writeSync(outputFd, exp, null, 'utf8')
 }
 
-fs.writeSync(outputFd, `export default [${exps.join(', ')}]\n`, null, 'utf8')
 fs.closeSync(outputFd)
 
 console.log(outputFilePath)
