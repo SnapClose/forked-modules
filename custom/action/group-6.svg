@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+    <defs>
+        <filter id="rx2x87cawa">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"/>
+        </filter>
+        <filter id="mrqb7vxntb">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.003922 0 0 0 0 0.003922 0 0 0 0 0.003922 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-linecap="square" filter="url(#rx2x87cawa)" transform="translate(-68 -590)">
+        <g filter="url(#mrqb7vxntb)" transform="translate(69 591)">
+            <g stroke="#D9D9D9">
+                <path d="M6.5.5L.5 5.5M7 4.25L4 6.75"/>
+            </g>
+        </g>
+    </g>
+</svg>
