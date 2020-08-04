@@ -32,14 +32,12 @@ executing: iigen my-src/components components-index.js js,vue
 The command will output in the stdout 'components-index.js' and will generate
 such file with the next content:
 
-import * as i0 from './my-src/components/auth.vue'
-import * as i1 from './my-src/components/module.js'
-export default [{ filename: 'auth.vue', exported: i0 }, { filename: 'module.js', exported: i1 }]
+export {default as ACTION_3D_ROTATION_24PX} from './action/svg/design/ic_3d_rotation_24px.svg'
+export {default as ACTION_3D_ROTATION_48PX} from './action/svg/design/ic_3d_rotation_48px.svg'
+...
 
-
-NOTE the tool doens't check the content of the files, so they are assumed to be
-wel formatted Javascript modules
-`
+NOTE the tool doesn't check the content of the files
+`;
 
 const fs = require('fs')
 const path = require('path')
@@ -105,6 +103,7 @@ for (let idx = 0; idx < filesList.length; idx++) {
     .toUpperCase()
     .substring(file.lastIndexOf('/') + 1, file.indexOf('.'))
     .replace(/-/g, '_')
+    .replace(/(IC_)/, '');
 
   const exp = `export {default as ${modifiedFileName}} from '${relPathOutSrc}/${file}'\n`;
 
