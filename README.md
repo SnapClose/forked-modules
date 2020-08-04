@@ -1,3 +1,16 @@
+## How to Use and Manage the material-design-icons Fork
+
+* Always `npm run build-index` before committing any changes/additions/removals of SVGs.
+* Original folder structure has been preserved as it makes for easy diffing/updates from original library.
+* Available exports shown in index.js - Naming convention as currently follows is: ROOTFOLDER_FILENAME in caps with "ic_" and ".svg" removed and all dashes converted to underscores.
+* SVG loader optimizations in host app should be taking care of minification and any other modifications.
+
+## Notes/Potential Upgrades
+* May want to abandon current structure and massively rename all icons so that both file and import name can match exactly.
+* Could create a Storybook-style preview page with all icons and their export names.
+* Left multiple sizes of SVGs as unsure if they would be useful, but may be best to just pick a size and enforce usage of that by deleting the rest. Can also modify import-index-generator to remove pixel size from the component names.
+
+
 ### Repo for forked modules that require custom editing. License should generally be MIT or equivalent if you want to edit open source code. 
 
 ### Add module to your project
